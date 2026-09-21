@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xirui Li - 清华大学 网络科学与网络空间研究院</title>
+<style>
+body{margin:0;background:#fff;color:#000;font:14px/1.75 "Microsoft YaHei","PingFang SC",SimSun,Arial,sans-serif}
+#top{background:#7a1f1f;color:#fff;padding:10px 0}
+#top .in{max-width:1000px;margin:0 auto;padding:0 16px;display:flex;align-items:center;justify-content:space-between}
+#top .logo{font-size:17px;font-weight:bold}
+#top a{color:#fff;text-decoration:none;font-size:13px}
+#nav{background:#f2f2f2;border-bottom:1px solid #d5d5d5}
+#nav .in{max-width:1000px;margin:0 auto;padding:0 16px;display:flex;flex-wrap:wrap}
+#nav a{display:block;padding:9px 14px;color:#333;text-decoration:none;font-size:13.5px;border-right:1px solid #e0e0e0}
+#nav a:first-child{border-left:1px solid #e0e0e0}
+#nav a:hover{background:#e6e6e6}
+#banner{height:74px;background:#eaeef3;border-bottom:1px solid #d5d5d5;display:flex;align-items:center}
+#banner .in{max-width:1000px;margin:0 auto;padding:0 16px;width:100%;font-size:13px;color:#555}
+.crumb{max-width:1000px;margin:0 auto;padding:12px 16px;font-size:13px;color:#555}
+.crumb a{color:#555;text-decoration:none}
+#main{max-width:1000px;margin:0 auto;padding:0 16px 40px;display:flex;gap:26px;align-items:flex-start}
+#side{flex:0 0 168px;padding-top:6px}
+#side .t{background:#eef1f5;border-left:3px solid #7a1f1f;padding:7px 10px;font-weight:bold;font-size:13.5px;margin-bottom:2px}
+#side ul{list-style:none;margin:0 0 16px;padding:0}
+#side li{border-bottom:1px dotted #d0d0d0}
+#side a{display:block;padding:6px 10px;font-size:13px;color:#333;text-decoration:none}
+#side a:hover{background:#f5f5f5;color:#7a1f1f}
+#content{flex:1;min-width:0;padding-top:6px}
+.pageh1{font-size:20px;font-weight:bold;text-align:center;margin:0 0 20px;padding-bottom:12px;border-bottom:2px solid #7a1f1f}
+.profile{display:flex;gap:20px;margin-bottom:22px}
+.photo{flex:0 0 132px}
+.photo img{width:132px;height:auto;border:1px solid #ccc;background:#fff;padding:2px;display:block}
+.info{flex:1;font-size:14px}
+.info table{border-collapse:collapse;width:100%}
+.info td{padding:4px 0;vertical-align:top;line-height:1.9}
+.info td.k{width:64px;color:#333}
+.info a{color:#00559b;text-decoration:none;word-break:break-all}
+h2.sec{font-size:14.5px;margin:24px 0 10px;padding:6px 10px;background:#f2f4f7;border-left:4px solid #7a1f1f;font-weight:bold}
+h3.sec3{font-size:14px;margin:16px 0 8px;font-weight:bold;color:#333}
+p{margin:0 0 11px}
+ul.plain{margin:0 0 12px;padding-left:22px}
+ul.plain li{margin-bottom:5px}
+ul.tags{list-style:none;margin:0 0 12px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+ul.tags li{background:#f2f4f7;border:1px solid #dde2e8;padding:3px 10px;font-size:13px;color:#333}
+.pub{border-bottom:1px dotted #d8d8d8;padding:9px 0;font-size:13.5px;line-height:1.75}
+.pub:last-child{border-bottom:0}
+.pub .ti{font-weight:bold}
+.pub .ti a{color:#00559b;text-decoration:none}
+.pub .ve{color:#555}
+.pub .ro{color:#7a1f1f}
+.newsitem{display:flex;gap:12px;padding:6px 0;font-size:13.5px;border-bottom:1px dotted #e4e4e4}
+.newsitem .d{flex:0 0 66px;color:#666}
+.patent{background:#fafafa;border:1px solid #e2e2e2;padding:10px 13px;font-size:13.5px;color:#333;margin:12px 0}
+.project{margin-bottom:18px;padding-bottom:14px;border-bottom:1px dotted #d8d8d8}
+.project:last-child{border-bottom:0}
+.project h3{margin:0 0 6px;font-size:14px}
+.project .ptag{font-weight:normal;color:#666;font-size:12.5px}
+.project .stack{color:#666;font-size:12.5px;margin:0}
+.project h3 a{color:#00559b;text-decoration:none;font-size:12.5px}
+#foot{border-top:2px solid #7a1f1f;margin-top:26px;padding:16px;text-align:center;font-size:12.5px;color:#666;background:#fafafa}
+#foot a{color:#666}
+@media(max-width:760px){#main{flex-direction:column}#side{flex:none;width:100%}.profile{flex-direction:column}}
+.swbox{display:none}
+</style>
+</head>
+<body>
+<div id="top"><div class="in">
+  <span class="logo">清华大学 网络科学与网络空间研究院</span>
+  <span><a href="#">English</a></span>
+</div></div>
+<div id="nav"><div class="in"><a href="#">首页</a><a href="#">院系简介</a><a href="#">机构设置</a><a href="#">师资状况</a><a href="#">科学研究</a><a href="#">教务教学</a><a href="#">招生招聘</a><a href="#">联系我们</a></div></div>
+<div id="banner"><div class="in">Institute for Network Sciences and Cyberspace</div></div>
+<div class="crumb"><a href="#">首页</a> &gt; <a href="#">师资状况</a> &gt; <a href="#">研究生</a> &gt; 正文</div>
+<div id="main">
+  <div id="side">
+    <div class="t">师资状况</div>
+    <ul>
+      <li><a href="#">教职工名录</a></li>
+      <li><a href="#">杰出人才</a></li>
+      <li><a href="#">研究生</a></li>
+      <li><a href="#">博士后</a></li>
+    </ul>
+    <div class="t">快速导航</div>
+    <ul>
+      <li><a href="#s0">教育背景</a></li>
+      <li><a href="#s1">研究领域</a></li>
+      <li><a href="#s2">研究概况</a></li>
+      <li><a href="#s3">学术成果</a></li>
+      <li><a href="#s4">最新动态</a></li>
+    </ul>
+  </div>
+  <div id="content">
+    <div class="pageh1">李熙锐（Xirui Li）</div>
+    <div class="profile">
+      <div class="photo"><img src="assets/photo.jpg" alt="Xirui Li"></div>
+      <div class="info">
+        <table>
+          <tr><td class="k">姓名：</td><td>李熙锐（Xirui Li）</td></tr>
+          <tr><td class="k">身份：</td><td>硕士研究生（M.S. Student in Cyber Security）</td></tr>
+          <tr><td class="k">单位：</td><td>Institute for Network Sciences and Cyberspace, Tsinghua University</td></tr>
+          <tr><td class="k">邮箱：</td><td><a href="mailto:li-xr24@mails.tsinghua.edu.cn">li-xr24@mails.tsinghua.edu.cn</a></td></tr>
+          <tr><td class="k">GitHub：</td><td><a href="https://github.com/siri401" target="_blank" rel="noopener">https://github.com/siri401</a></td></tr>
+        </table>
+      </div>
+    </div>
+    <h2 class="sec" id="s0">教育背景</h2>
+    <ul class="plain">
+      <li>工学硕士 (网络空间安全), 清华大学, 中国, 2027（预计）</li>
+      <li>工学学士 (软件工程), 电子科技大学, 中国, 2024</li>
+    </ul>
+    <h2 class="sec" id="s1">研究领域</h2>
+    <ul class="tags">
+      <li>Network Measurement</li>
+      <li>Sketch Algorithms</li>
+      <li>Heavy-Hitter Detection</li>
+      <li>Data-Plane Telemetry (P4/INT)</li>
+      <li>RDMA Networks</li>
+      <li>Training Cluster Observability</li>
+    </ul>
+    <h2 class="sec" id="s2">研究概况</h2>
+    <p>Xirui Li is an M.S. student at Tsinghua University, Institute for Network Sciences and Cyberspace. He builds <strong>fine-grained, low-overhead measurement systems for high-speed networks and large-scale training clusters</strong>.</p>
+    <h3 class="sec3">Observability of large-scale systems</h3>
+    <p>In thousand-GPU training clusters the failures that hurt most are the ones nobody can see: a slow link, a misconfigured NIC, a rank that finishes late every iteration. He works on making these systems expose what is actually happening, at a granularity that today&rsquo;s frameworks and hardware counters do not provide. This includes sketch-based heavy-hitter detection for high-speed and distributed streams, where the goal is high accuracy under tight memory and reporting budgets.</p>
+    <h3 class="sec3">System performance optimisation</h3>
+    <p>Fine-grained monitoring competes with the workload for the same bandwidth, switch resources and GPU cycles, so measurement has to pay for itself. He works on bounded-overhead designs, selective sampling, and online decisions about where to spend a limited budget &mdash; and on using what is measured to make the system itself faster. One example is a rate-sensitive scheme that monitors microsecond-scale burst behavior at very low cost.</p>
+    <h3 class="sec3">Fault reproducibility and root cause</h3>
+    <p>More data does not automatically mean better answers. He works on turning a detected anomaly into a reproducible, attributed root cause rather than an intermittent event nobody can explain after the fact. This includes fault diagnosis for RDMA training networks, tracking failures across the whole connection lifecycle from connection setup onwards.</p>
+    <h2 class="sec" id="s3">学术成果</h2>
+    <div class="pub"><div class="ti"><a href="https://dl.acm.org/doi/10.1145/3690624.3709167" target="_blank" rel="noopener">HeavyLocker: Lock Heavy Hitters in Distributed Data Streams</a></div><div class="ve">ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD) &middot; 2025 &nbsp;<span class="ro">Co-first author</span></div></div>
+    <div class="pub"><div class="ti"><a href="https://dl.acm.org/doi/10.1109/IWQoS65803.2025.11143517" target="_blank" rel="noopener">HeavyFinder: Efficient and Fine-grained Heavy Hitters Detection with Instantaneous Flow Rate</a></div><div class="ve">IEEE/ACM International Symposium on Quality of Service (IWQoS) &middot; 2025 &nbsp;<span class="ro">First author</span></div></div>
+    <div class="pub"><div class="ti"><a href="https://doi.org/10.1016/j.eswa.2025.128218" target="_blank" rel="noopener">An improved random permutation set entropy to address self-contradiction</a></div><div class="ve">Expert Systems with Applications, Vol. 288(C) &middot; 2025 &nbsp;<span class="ro">First author</span></div></div>
+    <div class="patent">Patent: Traffic Behavior Detection Method, Device and System. Filed by Tsinghua University. Published 2026.</div>
+    <h2 class="sec" id="s4">最新动态</h2>
+    <div class="newsitem"><span class="d">2026.05</span><span>Patent on traffic behavior detection published.</span></div>
+    <div class="newsitem"><span class="d">2025.11</span><span>Datacon Big Data Security Analysis Competition &mdash; 1st Prize (ranked #1 in AI Security track).</span></div>
+    <div class="newsitem"><span class="d">2025.09</span><span>A paper on distributed heavy-hitter monitoring appeared at KDD 2025.</span></div>
+    <div class="newsitem"><span class="d">2025.07</span><span>A paper on fine-grained heavy-hitter detection appeared at IWQoS 2025.</span></div>
+    <div class="newsitem"><span class="d">2024.11</span><span>Datacon Big Data Security Analysis Competition &mdash; 3rd Prize.</span></div>
+    <h2 class="sec">项目经历</h2>
+    <div class="project"><h3>HeavyLocker<span class="ptag">Lock-based heavy-hitter detection</span> <a href="https://github.com/HeavyLocker/HeavyLockerSketch" target="_blank" rel="noopener">repo</a></h3><p>Sketches evict and replace entries uniformly to bound memory, so a heavy hitter that stops being updated can be overwritten by a cold item and be lost before the stream ends. The key idea here is the <em>lock</em> itself: exploiting the separability of heavy and non-heavy hitters, each bucket carries a lock bit, and once every item in a bucket exceeds the real-time heavy-hitter threshold the bucket locks and its entries stop being replaced. The threshold is derived from the stream rather than configured by hand, so heavy hitters are protected without knowing their final frequencies in advance. Compared with DA Sketch at the same memory, ARE is up to 5.5&times; lower and AAE up to 6.7&times; lower. The design extends to distributed streams through a Merge interface, so nodes exchange only summary sketches while preserving global accuracy. My contribution covered accuracy optimisation of the algorithm, the distributed extension, experiment design and code optimisation.</p><p class="stack">C++, Python, distributed stream processing</p></div>
+    <div class="project"><h3>HeavyFinder<span class="ptag">Rate-sensitive burst detection</span> <a href="https://github.com/siri401/Heavyfinder" target="_blank" rel="noopener">repo</a></h3><p>Existing heavy-hitter detection trades monitoring granularity against overhead: to see short bursts you have to pay for fine-grained measurement everywhere. I designed a rate-sensitive detection scheme that spends its budget where the rate is changing, making microsecond-scale burst behavior observable at very low cost. At equal accuracy, reporting microsecond-scale burst behavior costs 4&ndash;20&times; less than existing schemes. I independently implemented the prototype and the full evaluation.</p><p class="stack">Python, C++, network measurement algorithms</p></div>
+    <div class="project"><h3>BitMatcher<span class="ptag">Bit-level counter allocation for sketches</span> <a href="https://github.com/wenjunpaper/BitMatcher" target="_blank" rel="noopener">repo</a></h3><p>A sketch&rsquo;s measurement accuracy is bounded by how efficiently it stores counters. State-of-the-art bit-level schemes already redistribute bits among counters, but the granularity of that redistribution is limited: the maximum width a single counter can take remains capped. I designed a more flexible allocation scheme that widens the space of achievable bit assignments, allowing larger counters where they are needed while keeping the overall budget fixed. At equal memory overhead, both AAE and ARE drop by 10&times; relative to the original scheme. On the journal extension I designed and implemented the full set of new experiments and wrote the revised portions of the paper.</p><p class="stack">C++, sketch data structures</p></div>
+    <div class="project"><h3>RD-flow<span class="ptag">Fault diagnosis for production RDMA training clusters</span></h3><p>Large-model training is far more sensitive to single-point anomalies than traditional cloud services: one bad machine can propagate across the whole cluster. Existing monitors either miss the connection-setup phase entirely or depend on expensive programmable hardware, forcing a bad trade between accuracy and deployment cost. This work mirrors the lightweight RDMA control packets (connection establishment, CNP, NAK) instead of capturing traffic wholesale, and infers the congestion flow state at microsecond granularity from their spatiotemporal relationships, running on commodity devices with no host-side modification. It also detects faults across the whole connection lifecycle, making previously silent setup-phase failures such as topology-discovery errors and rank assignment conflicts observable for the first time. Over 90% accuracy in congestion monitoring and localisation at about one-fifth the reporting overhead of state-of-the-art baselines, with accurate localisation of 87% of setup-phase faults, deployed on a production thousand-GPU training cluster. Work done with StepFun.</p><p class="stack">RDMA/RoCE, CNP/NAK control-packet telemetry, root-cause analysis</p></div>
+  </div>
+</div>
+<div id="foot">
+  地址：北京市海淀区双清路 30 号 清华大学&nbsp;&nbsp;100084<br>
+  Last updated: September 2025 &nbsp;|&nbsp; <a href="mailto:li-xr24@mails.tsinghua.edu.cn">li-xr24@mails.tsinghua.edu.cn</a>
+</div>
+</body>
+</html>

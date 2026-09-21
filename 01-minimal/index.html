@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xirui Li</title>
+<style>
+:root{--ink:#111;--muted:#6b7280;--rule:#e5e7eb;--accent:#1a56db}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:88px 28px 120px}
+header{display:flex;gap:26px;align-items:center;margin-bottom:6px}
+header .intro{min-width:0}
+header img{width:96px;height:96px;object-fit:cover;border-radius:50%;flex:0 0 auto;border:1px solid var(--rule)}
+header h1{font-size:34px;line-height:1.15;margin:0 0 6px;letter-spacing:-.02em;font-weight:650}
+.title{color:var(--muted);font-size:15px;margin:0}
+.affil{color:var(--muted);font-size:15px;margin:2px 0 22px}
+.links{font-size:14px;color:var(--muted);margin-bottom:56px}
+.links a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+h2{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:52px 0 18px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+p{margin:0 0 15px}
+h3.sub{font-size:15px;margin:26px 0 8px;font-weight:650}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin:0;padding:0;list-style:none}
+.tags li{font-size:13px;color:#374151;background:#f3f4f6;border-radius:3px;padding:3px 9px}
+ul.pubs,ul.news{list-style:none;margin:0;padding:0}
+li.pub{padding:0 0 20px;margin:0 0 20px;border-bottom:1px solid var(--rule)}
+li.pub:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.pub .ti{font-weight:600;margin-bottom:3px}
+.pub .ti a{color:var(--accent);text-decoration:none}
+.pub .ti a:hover{text-decoration:underline}
+.pub .ve{font-size:14px;color:var(--muted)}
+.pub .ro{color:#065f46;background:#ecfdf5;border-radius:3px;padding:1px 6px;font-size:12.5px}
+ul.news li{display:flex;gap:18px;padding:7px 0;font-size:15px}
+ul.news .d{color:var(--muted);font-variant-numeric:tabular-nums;flex:0 0 64px;font-size:13.5px;padding-top:2px}
+article.project{padding:0 0 22px;margin:0 0 22px;border-bottom:1px solid var(--rule)}
+article.project:last-child{border-bottom:0}
+article.project h3{font-size:16px;margin:0 0 8px;font-weight:650}
+.ptag{font-size:12.5px;color:var(--muted);font-weight:400;font-style:italic}
+article.project h3 a{font-size:13px;color:var(--accent);font-weight:400;text-decoration:none}
+.stack{font-size:13.5px;color:var(--muted);margin:0}
+.patent{font-size:14.5px;color:#374151;background:#f9fafb;border-left:3px solid var(--rule);padding:12px 16px;margin:20px 0 0}
+footer{margin-top:72px;padding-top:20px;border-top:1px solid var(--rule);color:var(--muted);font-size:13.5px}
+.swbox{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="assets/photo.jpg" alt="Xirui Li">
+    <div class="intro">
+      <h1>Xirui Li</h1>
+      <p class="title">M.S. Student in Cyber Security</p>
+      <p class="affil">Institute for Network Sciences and Cyberspace, Tsinghua University</p>
+    </div>
+  </header>
+  <p class="links"><a href="mailto:li-xr24@mails.tsinghua.edu.cn">li-xr24@mails.tsinghua.edu.cn</a> &nbsp;|&nbsp; <a href="https://github.com/siri401" target="_blank" rel="noopener">github.com/siri401</a></p>
+  <section>
+    <p>Xirui Li is an M.S. student at Tsinghua University, Institute for Network Sciences and Cyberspace. He builds <strong>fine-grained, low-overhead measurement systems for high-speed networks and large-scale training clusters</strong>.</p>
+    <h3 class="sub">Observability of large-scale systems</h3>
+    <p>In thousand-GPU training clusters the failures that hurt most are the ones nobody can see: a slow link, a misconfigured NIC, a rank that finishes late every iteration. He works on making these systems expose what is actually happening, at a granularity that today&rsquo;s frameworks and hardware counters do not provide. This includes sketch-based heavy-hitter detection for high-speed and distributed streams, where the goal is high accuracy under tight memory and reporting budgets.</p>
+    <h3 class="sub">System performance optimisation</h3>
+    <p>Fine-grained monitoring competes with the workload for the same bandwidth, switch resources and GPU cycles, so measurement has to pay for itself. He works on bounded-overhead designs, selective sampling, and online decisions about where to spend a limited budget &mdash; and on using what is measured to make the system itself faster. One example is a rate-sensitive scheme that monitors microsecond-scale burst behavior at very low cost.</p>
+    <h3 class="sub">Fault reproducibility and root cause</h3>
+    <p>More data does not automatically mean better answers. He works on turning a detected anomaly into a reproducible, attributed root cause rather than an intermittent event nobody can explain after the fact. This includes fault diagnosis for RDMA training networks, tracking failures across the whole connection lifecycle from connection setup onwards.</p>
+  </section>
+  <h2>Research Interests</h2>
+  <ul class="tags">
+    <li>Network Measurement</li>
+    <li>Sketch Algorithms</li>
+    <li>Heavy-Hitter Detection</li>
+    <li>Data-Plane Telemetry (P4/INT)</li>
+    <li>RDMA Networks</li>
+    <li>Training Cluster Observability</li>
+  </ul>
+  <h2>Publications</h2>
+  <ul class="pubs">
+    <div class="pub"><div class="ti"><a href="https://dl.acm.org/doi/10.1145/3690624.3709167" target="_blank" rel="noopener">HeavyLocker: Lock Heavy Hitters in Distributed Data Streams</a></div><div class="ve">ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD) &middot; 2025 &nbsp;<span class="ro">Co-first author</span></div></div>
+    <div class="pub"><div class="ti"><a href="https://dl.acm.org/doi/10.1109/IWQoS65803.2025.11143517" target="_blank" rel="noopener">HeavyFinder: Efficient and Fine-grained Heavy Hitters Detection with Instantaneous Flow Rate</a></div><div class="ve">IEEE/ACM International Symposium on Quality of Service (IWQoS) &middot; 2025 &nbsp;<span class="ro">First author</span></div></div>
+    <div class="pub"><div class="ti"><a href="https://doi.org/10.1016/j.eswa.2025.128218" target="_blank" rel="noopener">An improved random permutation set entropy to address self-contradiction</a></div><div class="ve">Expert Systems with Applications, Vol. 288(C) &middot; 2025 &nbsp;<span class="ro">First author</span></div></div>
+  </ul>
+  <p class="patent">Patent: Traffic Behavior Detection Method, Device and System. Filed by Tsinghua University. Published 2026.</p>
+  <h2>News</h2>
+  <ul class="news">
+    <li><span class="d">2026.05</span><span>Patent on traffic behavior detection published.</span></li>
+    <li><span class="d">2025.11</span><span>Datacon Big Data Security Analysis Competition &mdash; 1st Prize (ranked #1 in AI Security track).</span></li>
+    <li><span class="d">2025.09</span><span>A paper on distributed heavy-hitter monitoring appeared at KDD 2025.</span></li>
+    <li><span class="d">2025.07</span><span>A paper on fine-grained heavy-hitter detection appeared at IWQoS 2025.</span></li>
+    <li><span class="d">2024.11</span><span>Datacon Big Data Security Analysis Competition &mdash; 3rd Prize.</span></li>
+  </ul>
+  <h2>Projects</h2>
+    <div class="project"><h3>HeavyLocker<span class="ptag">Lock-based heavy-hitter detection</span> <a href="https://github.com/HeavyLocker/HeavyLockerSketch" target="_blank" rel="noopener">repo</a></h3><p>Sketches evict and replace entries uniformly to bound memory, so a heavy hitter that stops being updated can be overwritten by a cold item and be lost before the stream ends. The key idea here is the <em>lock</em> itself: exploiting the separability of heavy and non-heavy hitters, each bucket carries a lock bit, and once every item in a bucket exceeds the real-time heavy-hitter threshold the bucket locks and its entries stop being replaced. The threshold is derived from the stream rather than configured by hand, so heavy hitters are protected without knowing their final frequencies in advance. Compared with DA Sketch at the same memory, ARE is up to 5.5&times; lower and AAE up to 6.7&times; lower. The design extends to distributed streams through a Merge interface, so nodes exchange only summary sketches while preserving global accuracy. My contribution covered accuracy optimisation of the algorithm, the distributed extension, experiment design and code optimisation.</p><p class="stack">C++, Python, distributed stream processing</p></div>
+    <div class="project"><h3>HeavyFinder<span class="ptag">Rate-sensitive burst detection</span> <a href="https://github.com/siri401/Heavyfinder" target="_blank" rel="noopener">repo</a></h3><p>Existing heavy-hitter detection trades monitoring granularity against overhead: to see short bursts you have to pay for fine-grained measurement everywhere. I designed a rate-sensitive detection scheme that spends its budget where the rate is changing, making microsecond-scale burst behavior observable at very low cost. At equal accuracy, reporting microsecond-scale burst behavior costs 4&ndash;20&times; less than existing schemes. I independently implemented the prototype and the full evaluation.</p><p class="stack">Python, C++, network measurement algorithms</p></div>
+    <div class="project"><h3>BitMatcher<span class="ptag">Bit-level counter allocation for sketches</span> <a href="https://github.com/wenjunpaper/BitMatcher" target="_blank" rel="noopener">repo</a></h3><p>A sketch&rsquo;s measurement accuracy is bounded by how efficiently it stores counters. State-of-the-art bit-level schemes already redistribute bits among counters, but the granularity of that redistribution is limited: the maximum width a single counter can take remains capped. I designed a more flexible allocation scheme that widens the space of achievable bit assignments, allowing larger counters where they are needed while keeping the overall budget fixed. At equal memory overhead, both AAE and ARE drop by 10&times; relative to the original scheme. On the journal extension I designed and implemented the full set of new experiments and wrote the revised portions of the paper.</p><p class="stack">C++, sketch data structures</p></div>
+    <div class="project"><h3>RD-flow<span class="ptag">Fault diagnosis for production RDMA training clusters</span></h3><p>Large-model training is far more sensitive to single-point anomalies than traditional cloud services: one bad machine can propagate across the whole cluster. Existing monitors either miss the connection-setup phase entirely or depend on expensive programmable hardware, forcing a bad trade between accuracy and deployment cost. This work mirrors the lightweight RDMA control packets (connection establishment, CNP, NAK) instead of capturing traffic wholesale, and infers the congestion flow state at microsecond granularity from their spatiotemporal relationships, running on commodity devices with no host-side modification. It also detects faults across the whole connection lifecycle, making previously silent setup-phase failures such as topology-discovery errors and rank assignment conflicts observable for the first time. Over 90% accuracy in congestion monitoring and localisation at about one-fifth the reporting overhead of state-of-the-art baselines, with accurate localisation of 87% of setup-phase faults, deployed on a production thousand-GPU training cluster. Work done with StepFun.</p><p class="stack">RDMA/RoCE, CNP/NAK control-packet telemetry, root-cause analysis</p></div>
+  <footer>Last updated: September 2025</footer>
+</div>
+</body>
+</html>

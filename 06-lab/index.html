@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xirui Li</title>
+<style>
+:root{--bg:#f7f9fb;--card:#fff;--line:#e3e8ef;--ink:#0f172a;--dim:#5b6b82;--teal:#0f766e;--teal2:#14b8a6;--amber:#b45309}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.68 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+.top{background:#fff;border-bottom:1px solid var(--line)}
+.top .in{max-width:860px;margin:0 auto;padding:34px 28px 30px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.who{display:flex;gap:20px;align-items:center}
+.who img{width:84px;height:84px;object-fit:cover;border-radius:50%;border:2px solid var(--line);flex:0 0 auto}
+.who h1{font-size:32px;margin:0 0 5px;font-weight:750;letter-spacing:-.02em}
+.who .role{color:var(--dim);font-size:15px;margin:0}
+.contact{font-size:14px;text-align:right;color:var(--dim);line-height:1.9}
+.contact a{color:var(--teal);text-decoration:none}
+.wrap{max-width:860px;margin:0 auto;padding:38px 28px 96px}
+h2{font-size:19px;font-weight:700;margin:44px 0 18px;display:flex;align-items:center;gap:11px;letter-spacing:-.01em}
+h2:before{content:"";width:4px;height:19px;background:var(--teal2);border-radius:2px}
+.lead{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 28px;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.lead p{margin:0 0 16px}
+.track{border-left:3px solid var(--teal2);padding-left:16px;margin:20px 0 0}
+.track h3{margin:0 0 6px;font-size:15.5px;color:var(--teal);font-weight:650}
+.track p{margin:0}
+ul.tags{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0}
+ul.tags li{font-size:13px;color:var(--teal);background:rgba(20,184,166,.09);border:1px solid rgba(20,184,166,.22);border-radius:999px;padding:4px 12px}
+.grid{display:grid;gap:14px}
+.pub{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.pub .ti{font-weight:650;font-size:15.5px;line-height:1.5}
+.pub .ti a{color:var(--teal);text-decoration:none;border-bottom:1px dotted var(--teal)}
+.pub .ve{color:var(--dim);font-size:13.5px;margin-top:5px}
+.pub .ro{display:inline-block;font-size:12.5px;color:var(--amber);background:#fffbeb;border:1px solid #fde68a;border-radius:6px;padding:1px 8px}
+.patent{background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:16px 20px;color:#78350f;font-size:14px;margin-top:14px}
+ul.news{list-style:none;padding:0;margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+ul.news li{display:flex;gap:18px;padding:13px 20px;font-size:15px;border-bottom:1px solid var(--line)}
+ul.news li:last-child{border-bottom:0}
+ul.news .d{flex:0 0 74px;color:var(--teal);font-variant-numeric:tabular-nums;font-size:13.5px;padding-top:2px;font-weight:600}
+.project{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.project h3{margin:0 0 9px;font-size:16.5px;font-weight:650}
+.project h3 .ptag{font-size:12.5px;color:var(--dim);font-weight:400;margin-left:9px}
+.project h3 a{color:var(--teal);font-size:13px;text-decoration:none;margin-left:9px}
+.project .stack{color:var(--dim);font-size:13px;margin:0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--line);color:var(--dim);font-size:13.5px;text-align:center}
+.swbox{display:none}
+</style>
+</head>
+<body>
+<div class="top"><div class="in">
+  <div class="who">
+    <img src="assets/photo.jpg" alt="Xirui Li">
+    <div>
+      <h1>Xirui Li</h1>
+      <p class="role">M.S. Student in Cyber Security &nbsp;&middot;&nbsp; Institute for Network Sciences and Cyberspace, Tsinghua University</p>
+    </div>
+  </div>
+  <div class="contact"><a href="mailto:li-xr24@mails.tsinghua.edu.cn">li-xr24@mails.tsinghua.edu.cn</a> &nbsp;|&nbsp; <a href="https://github.com/siri401" target="_blank" rel="noopener">github.com/siri401</a></div>
+</div></div>
+<div class="wrap">
+  <div class="lead">
+    <p>Xirui Li is an M.S. student at Tsinghua University, Institute for Network Sciences and Cyberspace. He builds <strong>fine-grained, low-overhead measurement systems for high-speed networks and large-scale training clusters</strong>.</p>
+    <div class="track"><h3>Observability of large-scale systems</h3><p>In thousand-GPU training clusters the failures that hurt most are the ones nobody can see: a slow link, a misconfigured NIC, a rank that finishes late every iteration. He works on making these systems expose what is actually happening, at a granularity that today&rsquo;s frameworks and hardware counters do not provide. This includes sketch-based heavy-hitter detection for high-speed and distributed streams, where the goal is high accuracy under tight memory and reporting budgets.</p></div>
+    <div class="track"><h3>System performance optimisation</h3><p>Fine-grained monitoring competes with the workload for the same bandwidth, switch resources and GPU cycles, so measurement has to pay for itself. He works on bounded-overhead designs, selective sampling, and online decisions about where to spend a limited budget &mdash; and on using what is measured to make the system itself faster. One example is a rate-sensitive scheme that monitors microsecond-scale burst behavior at very low cost.</p></div>
+    <div class="track"><h3>Fault reproducibility and root cause</h3><p>More data does not automatically mean better answers. He works on turning a detected anomaly into a reproducible, attributed root cause rather than an intermittent event nobody can explain after the fact. This includes fault diagnosis for RDMA training networks, tracking failures across the whole connection lifecycle from connection setup onwards.</p></div>
+  </div>
+  <h2>Research Interests</h2>
+  <ul class="tags">
+    <li>Network Measurement</li>
+    <li>Sketch Algorithms</li>
+    <li>Heavy-Hitter Detection</li>
+    <li>Data-Plane Telemetry (P4/INT)</li>
+    <li>RDMA Networks</li>
+    <li>Training Cluster Observability</li>
+  </ul>
+  <h2>Publications</h2>
+  <div class="grid">
+    <div class="pub"><div class="ti"><a href="https://dl.acm.org/doi/10.1145/3690624.3709167" target="_blank" rel="noopener">HeavyLocker: Lock Heavy Hitters in Distributed Data Streams</a></div><div class="ve">ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD) &middot; 2025 &nbsp;<span class="ro">Co-first author</span></div></div>
+    <div class="pub"><div class="ti"><a href="https://dl.acm.org/doi/10.1109/IWQoS65803.2025.11143517" target="_blank" rel="noopener">HeavyFinder: Efficient and Fine-grained Heavy Hitters Detection with Instantaneous Flow Rate</a></div><div class="ve">IEEE/ACM International Symposium on Quality of Service (IWQoS) &middot; 2025 &nbsp;<span class="ro">First author</span></div></div>
+    <div class="pub"><div class="ti"><a href="https://doi.org/10.1016/j.eswa.2025.128218" target="_blank" rel="noopener">An improved random permutation set entropy to address self-contradiction</a></div><div class="ve">Expert Systems with Applications, Vol. 288(C) &middot; 2025 &nbsp;<span class="ro">First author</span></div></div>
+  </div>
+  <p class="patent">Patent: Traffic Behavior Detection Method, Device and System. Filed by Tsinghua University. Published 2026.</p>
+  <h2>News</h2>
+  <ul class="news">
+    <li><span class="d">2026.05</span><span>Patent on traffic behavior detection published.</span></li>
+    <li><span class="d">2025.11</span><span>Datacon Big Data Security Analysis Competition &mdash; 1st Prize (ranked #1 in AI Security track).</span></li>
+    <li><span class="d">2025.09</span><span>A paper on distributed heavy-hitter monitoring appeared at KDD 2025.</span></li>
+    <li><span class="d">2025.07</span><span>A paper on fine-grained heavy-hitter detection appeared at IWQoS 2025.</span></li>
+    <li><span class="d">2024.11</span><span>Datacon Big Data Security Analysis Competition &mdash; 3rd Prize.</span></li>
+  </ul>
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="project"><h3>HeavyLocker<span class="ptag">Lock-based heavy-hitter detection</span> <a href="https://github.com/HeavyLocker/HeavyLockerSketch" target="_blank" rel="noopener">repo</a></h3><p>Sketches evict and replace entries uniformly to bound memory, so a heavy hitter that stops being updated can be overwritten by a cold item and be lost before the stream ends. The key idea here is the <em>lock</em> itself: exploiting the separability of heavy and non-heavy hitters, each bucket carries a lock bit, and once every item in a bucket exceeds the real-time heavy-hitter threshold the bucket locks and its entries stop being replaced. The threshold is derived from the stream rather than configured by hand, so heavy hitters are protected without knowing their final frequencies in advance. Compared with DA Sketch at the same memory, ARE is up to 5.5&times; lower and AAE up to 6.7&times; lower. The design extends to distributed streams through a Merge interface, so nodes exchange only summary sketches while preserving global accuracy. My contribution covered accuracy optimisation of the algorithm, the distributed extension, experiment design and code optimisation.</p><p class="stack">C++, Python, distributed stream processing</p></div>
+    <div class="project"><h3>HeavyFinder<span class="ptag">Rate-sensitive burst detection</span> <a href="https://github.com/siri401/Heavyfinder" target="_blank" rel="noopener">repo</a></h3><p>Existing heavy-hitter detection trades monitoring granularity against overhead: to see short bursts you have to pay for fine-grained measurement everywhere. I designed a rate-sensitive detection scheme that spends its budget where the rate is changing, making microsecond-scale burst behavior observable at very low cost. At equal accuracy, reporting microsecond-scale burst behavior costs 4&ndash;20&times; less than existing schemes. I independently implemented the prototype and the full evaluation.</p><p class="stack">Python, C++, network measurement algorithms</p></div>
+    <div class="project"><h3>BitMatcher<span class="ptag">Bit-level counter allocation for sketches</span> <a href="https://github.com/wenjunpaper/BitMatcher" target="_blank" rel="noopener">repo</a></h3><p>A sketch&rsquo;s measurement accuracy is bounded by how efficiently it stores counters. State-of-the-art bit-level schemes already redistribute bits among counters, but the granularity of that redistribution is limited: the maximum width a single counter can take remains capped. I designed a more flexible allocation scheme that widens the space of achievable bit assignments, allowing larger counters where they are needed while keeping the overall budget fixed. At equal memory overhead, both AAE and ARE drop by 10&times; relative to the original scheme. On the journal extension I designed and implemented the full set of new experiments and wrote the revised portions of the paper.</p><p class="stack">C++, sketch data structures</p></div>
+    <div class="project"><h3>RD-flow<span class="ptag">Fault diagnosis for production RDMA training clusters</span></h3><p>Large-model training is far more sensitive to single-point anomalies than traditional cloud services: one bad machine can propagate across the whole cluster. Existing monitors either miss the connection-setup phase entirely or depend on expensive programmable hardware, forcing a bad trade between accuracy and deployment cost. This work mirrors the lightweight RDMA control packets (connection establishment, CNP, NAK) instead of capturing traffic wholesale, and infers the congestion flow state at microsecond granularity from their spatiotemporal relationships, running on commodity devices with no host-side modification. It also detects faults across the whole connection lifecycle, making previously silent setup-phase failures such as topology-discovery errors and rank assignment conflicts observable for the first time. Over 90% accuracy in congestion monitoring and localisation at about one-fifth the reporting overhead of state-of-the-art baselines, with accurate localisation of 87% of setup-phase faults, deployed on a production thousand-GPU training cluster. Work done with StepFun.</p><p class="stack">RDMA/RoCE, CNP/NAK control-packet telemetry, root-cause analysis</p></div>
+  </div>
+  <footer>Last updated: September 2025</footer>
+</div>
+</body>
+</html>
