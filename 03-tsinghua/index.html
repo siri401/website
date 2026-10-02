@@ -51,6 +51,8 @@ ul.tags li{background:#f2f4f7;border:1px solid #dde2e8;padding:3px 10px;font-siz
 .pub .ro{color:#7a1f1f}
 .newsitem{display:flex;gap:12px;padding:6px 0;font-size:13.5px;border-bottom:1px dotted #e4e4e4}
 .newsitem .d{flex:0 0 66px;color:#666}
+ul.awards{margin:0 0 12px;padding-left:22px}
+ul.awards li{margin-bottom:5px}
 .patent{background:#fafafa;border:1px solid #e2e2e2;padding:10px 13px;font-size:13.5px;color:#333;margin:12px 0}
 .project{margin-bottom:18px;padding-bottom:14px;border-bottom:1px dotted #d8d8d8}
 .project:last-child{border-bottom:0}
@@ -119,13 +121,13 @@ ul.tags li{background:#f2f4f7;border:1px solid #dde2e8;padding:3px 10px;font-siz
       <li>Training Cluster Observability</li>
     </ul>
     <h2 class="sec" id="s2">研究概况</h2>
-    <p>Xirui Li is an M.S. student at Tsinghua University, Institute for Network Sciences and Cyberspace. He builds <strong>fine-grained, low-overhead measurement systems for high-speed networks and large-scale training clusters</strong>.</p>
+    <p>I am an M.S. student at Tsinghua University, Institute for Network Sciences and Cyberspace, working on <strong>fine-grained, low-overhead measurement systems for high-speed networks and large-scale training clusters</strong>. My work covers the full path from programmable-switch telemetry and sketch algorithms to fault monitoring deployed on a production thousand-GPU training cluster.</p>
     <h3 class="sec3">Observability of large-scale systems</h3>
-    <p>In thousand-GPU training clusters the failures that hurt most are the ones nobody can see: a slow link, a misconfigured NIC, a rank that finishes late every iteration. He works on making these systems expose what is actually happening, at a granularity that today&rsquo;s frameworks and hardware counters do not provide. This includes sketch-based heavy-hitter detection for high-speed and distributed streams, where the goal is high accuracy under tight memory and reporting budgets.</p>
+    <p>In thousand-GPU training clusters the failures that hurt most are the ones nobody can see: a slow link, a misconfigured NIC, a rank that finishes late every iteration. I work on making these systems expose what is actually happening, at a granularity that today&rsquo;s frameworks and hardware counters do not provide. This includes sketch-based heavy-hitter detection for high-speed and distributed streams, where the goal is high accuracy under tight memory and reporting budgets.</p>
     <h3 class="sec3">System performance optimisation</h3>
-    <p>Fine-grained monitoring competes with the workload for the same bandwidth, switch resources and GPU cycles, so measurement has to pay for itself. He works on bounded-overhead designs, selective sampling, and online decisions about where to spend a limited budget &mdash; and on using what is measured to make the system itself faster. One example is a rate-sensitive scheme that monitors microsecond-scale burst behavior at very low cost.</p>
+    <p>Fine-grained monitoring competes with the workload for the same bandwidth, switch resources and GPU cycles, so measurement has to pay for itself. I work on bounded-overhead designs, selective sampling, and online decisions about where to spend a limited budget &mdash; and on using what is measured to make the system itself faster. One example is a rate-sensitive scheme that monitors microsecond-scale burst behavior at very low cost.</p>
     <h3 class="sec3">Fault reproducibility and root cause</h3>
-    <p>More data does not automatically mean better answers. He works on turning a detected anomaly into a reproducible, attributed root cause rather than an intermittent event nobody can explain after the fact. This includes fault diagnosis for RDMA training networks, tracking failures across the whole connection lifecycle from connection setup onwards.</p>
+    <p>More data does not automatically mean better answers. I work on turning a detected anomaly into a reproducible, attributed root cause rather than an intermittent event nobody can explain after the fact. This includes fault diagnosis for RDMA training networks, tracking failures across the whole connection lifecycle from connection setup onwards.</p>
     <h2 class="sec" id="s3">学术成果</h2>
     <div class="pub"><div class="ti"><a href="https://dl.acm.org/doi/10.1145/3690624.3709167" target="_blank" rel="noopener">HeavyLocker: Lock Heavy Hitters in Distributed Data Streams</a></div><div class="ve">ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD) &middot; 2025 &nbsp;<span class="ro">Co-first author</span></div></div>
     <div class="pub"><div class="ti"><a href="https://dl.acm.org/doi/10.1109/IWQoS65803.2025.11143517" target="_blank" rel="noopener">HeavyFinder: Efficient and Fine-grained Heavy Hitters Detection with Instantaneous Flow Rate</a></div><div class="ve">IEEE/ACM International Symposium on Quality of Service (IWQoS) &middot; 2025 &nbsp;<span class="ro">First author</span></div></div>
@@ -142,11 +144,19 @@ ul.tags li{background:#f2f4f7;border:1px solid #dde2e8;padding:3px 10px;font-siz
     <div class="project"><h3>HeavyFinder<span class="ptag">Rate-sensitive burst detection</span> <a href="https://github.com/siri401/Heavyfinder" target="_blank" rel="noopener">repo</a></h3><p>Existing heavy-hitter detection trades monitoring granularity against overhead: to see short bursts you have to pay for fine-grained measurement everywhere. I designed a rate-sensitive detection scheme that spends its budget where the rate is changing, making microsecond-scale burst behavior observable at very low cost. At equal accuracy, reporting microsecond-scale burst behavior costs 4&ndash;20&times; less than existing schemes. I independently implemented the prototype and the full evaluation.</p><p class="stack">Python, C++, network measurement algorithms</p></div>
     <div class="project"><h3>BitMatcher<span class="ptag">Bit-level counter allocation for sketches</span> <a href="https://github.com/wenjunpaper/BitMatcher" target="_blank" rel="noopener">repo</a></h3><p>A sketch&rsquo;s measurement accuracy is bounded by how efficiently it stores counters. State-of-the-art bit-level schemes already redistribute bits among counters, but the granularity of that redistribution is limited: the maximum width a single counter can take remains capped. I designed a more flexible allocation scheme that widens the space of achievable bit assignments, allowing larger counters where they are needed while keeping the overall budget fixed. At equal memory overhead, both AAE and ARE drop by 10&times; relative to the original scheme. On the journal extension I designed and implemented the full set of new experiments and wrote the revised portions of the paper.</p><p class="stack">C++, sketch data structures</p></div>
     <div class="project"><h3>RD-flow<span class="ptag">Fault diagnosis for production RDMA training clusters</span></h3><p>Large-model training is far more sensitive to single-point anomalies than traditional cloud services: one bad machine can propagate across the whole cluster. Existing monitors either miss the connection-setup phase entirely or depend on expensive programmable hardware, forcing a bad trade between accuracy and deployment cost. This work mirrors the lightweight RDMA control packets (connection establishment, CNP, NAK) instead of capturing traffic wholesale, and infers the congestion flow state at microsecond granularity from their spatiotemporal relationships, running on commodity devices with no host-side modification. It also detects faults across the whole connection lifecycle, making previously silent setup-phase failures such as topology-discovery errors and rank assignment conflicts observable for the first time. Over 90% accuracy in congestion monitoring and localisation at about one-fifth the reporting overhead of state-of-the-art baselines, with accurate localisation of 87% of setup-phase faults, deployed on a production thousand-GPU training cluster. Work done with StepFun.</p><p class="stack">RDMA/RoCE, CNP/NAK control-packet telemetry, root-cause analysis</p></div>
+    <h2 class="sec">荣誉奖励</h2>
+    <ul class="awards">
+    <li><span class="d">2025</span><span>1st Prize, AI Security Track (ranked #1), Datacon Big Data Security Analysis Competition.</span></li>
+    <li><span class="d">2024</span><span>3rd Prize, Cybercrime Analysis Track, Datacon Big Data Security Analysis Competition.</span></li>
+    <li><span class="d">2022</span><span>2nd Prize, National Level, Network Technology Competition, China Collegiate Computing Contest (CCCC).</span></li>
+    <li><span class="d">2021</span><span>2nd Prize, Sichuan Province, National College Student Mathematics Competition.</span></li>
+    <li><span class="d"></span><span>Scholarships and honors: Tsinghua University Second-Class Scholarship; Toyota Scholarship; UESTC Outstanding Student First-Class Scholarship (&times;3); Sichuan Province Outstanding Graduate.</span></li>
+    </ul>
   </div>
 </div>
 <div id="foot">
   地址：北京市海淀区双清路 30 号 清华大学&nbsp;&nbsp;100084<br>
-  Last updated: September 2025 &nbsp;|&nbsp; <a href="mailto:li-xr24@mails.tsinghua.edu.cn">li-xr24@mails.tsinghua.edu.cn</a>
+  Last updated: October 2026 &nbsp;|&nbsp; <a href="mailto:li-xr24@mails.tsinghua.edu.cn">li-xr24@mails.tsinghua.edu.cn</a>
 </div>
 </body>
 </html>
